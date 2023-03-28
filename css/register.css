@@ -1,0 +1,225 @@
+@import url('/css/reset.css');
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('/fonts/Roboto-Medium.ttf');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+html{
+	font-size: 12px;
+}
+
+body {
+	font-family: 'Roboto';
+	font-weight: 400;
+	font-size: 1rem;
+}
+
+.wrapper {
+	height: 100vh;
+	background: url('/images/bgreg.png') no-repeat 100%/ cover;
+	position: relative;
+	overflow: hidden;
+}
+
+.wrapper::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: rgba(22, 21, 21, 0.5);
+}
+
+.container {
+	height: 100%;
+	max-width: 496px;
+	margin-left: auto;
+	position: relative;
+	backdrop-filter: blur(5px);
+	-webkit-backdrop-filter: blur(5px);
+	background: rgba(233, 233, 233, 0.25);
+}
+
+.box {
+	max-width: 340px;
+	margin: 0 auto;
+	padding: 60px 0;
+}
+
+.choice {
+	margin-bottom: 75px;
+
+}
+
+.choice input {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+}
+
+.choice input + label {
+	display: flex;
+	align-items: center;
+	text-align: center;
+	height: 36px;
+	border-radius: 30px;
+	border: 1px solid #153416;
+	position: relative;
+}
+
+.choice input + label::before {
+	content: '';
+	position: absolute;
+	top: 2px;
+	left: 2px;
+  right: 2px;
+  bottom: 2px;
+	width: 50%;
+	height: 30px;
+	background: #153416;
+	border-radius: 30px;
+	transition: all .3s linear;
+}
+
+.choice input:checked + label:before {
+	left: calc(100% - 2px);
+	transform: translateX(-100%);
+}
+
+.choice input + label span {
+	color: #fff;
+	flex: 0 0 50%;
+	position: relative;
+}
+
+.text {
+  color: #fff;
+  font-size: 30px;
+  text-align: center;
+	margin-bottom: 30px;
+}
+
+.logIn {
+	width: 100%;
+	color: #fff;
+  background: #929191;
+  border: none;
+  outline: none;
+  border-radius: 30px;
+  padding: 15px 20px ;
+  margin-bottom: 20px;
+}
+
+.logIn::placeholder {
+  color: #fff;
+}
+
+.box-1 {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 20px;
+}
+
+.rememberMe label {
+	font-size: 12px;
+}
+
+.rememberMe input {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+}
+
+.rememberMe input + label {
+	padding: 5px 5px 5px 20px;
+	position: relative;
+}
+
+.rememberMe input + label:before {
+	content: '';
+	position: absolute;
+	top: 4px;
+	left: 0;
+	width: 15px;
+	height: 15px;
+  border-radius: 2px;
+	border: 1px solid  #D9D9D9;
+}
+
+.rememberMe input:checked + label::before {
+	background: #153416;
+}
+
+.rememberMe input:checked + label::after {
+	content: '';
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	width: 5px;
+	height: 10px;
+	border-bottom: 1px solid #fff;
+	border-right: 1px solid #fff;
+	transform: rotate(35deg);
+}
+
+.forgot > li a {
+  color: #153416;
+	font-size: 12px;
+}
+
+button {
+  background: #153416;
+  color: #fff;
+  border-radius: 30px;
+  padding: 16px ;
+	width: 100%;
+	margin-bottom: 40px;
+}
+
+.box-2{
+	margin-bottom: 30px;
+}
+
+.text-2 {
+	display: flex;
+	justify-content: center;
+  gap: 15px;
+}
+
+.notAcc a {
+	font-size: 12px;
+	color: #153416;
+	text-decoration: none;
+}
+
+.reg a {
+	font-size: 12px;
+	color: #fff;
+}
+
+.text-3 {
+  color: #153416;
+	display: flex;
+	justify-content: center;
+	margin-bottom: 20px;
+}
+
+.svgIcon > ul {
+  display: inline-flex;
+  gap: 20px;
+}
+
+.box-3 {
+	height: 100%;
+	width: 100%;
+	justify-content: center;
+}
+
+.svg {
+	width: 24px;
+	height: 24px;
+	fill: #153416;
+}
